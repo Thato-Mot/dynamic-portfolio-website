@@ -11,27 +11,54 @@
 {% endblock %}
 
 {% block content %}
-  <main>
-    <section id="home">
-      <div class="first-half">
-        <div class="aboutimage">
-          <img src="{{ url_for('static', filename='Images/Formal.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+<main>
+  <section id="home">
+    <div class="first-half">
+      <div class="aboutimage">
+        <form method="POST">
+          <div class="form-group">
+            <input type="text" name="search_query" placeholder="Search for an image..." value="{{ query }}" class="search-bar">
+            <button type="submit" class="search-button">Search</button>
+          </div>
+          
+        </form>
+        {% if image_url %}
+        <img src="{{ image_url }}" alt="Picture from Pixabay" class="aboutIMG api" id="dynamic-image">
+        <p class="tags" id="image-tags">Tags: {{ tags }}</p>
+        {% else %}
+        <img src="{{ url_for('static', filename='Images/Formal.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+        {% endif %}
+      </div>
+    </div>
+    <div class="second-half">
+      <div class="aboutMe">A Bit About Me</div>
+      <div class="aboutAbout">
+        <span class="greeting">Hey There!</span><span class="lebitso">I'm Thatohatsi Motlhamme</span>
+        A Mechatronics Engineering graduate from the University of Cape Town, passionate about integrating mechanical, electrical, and computer engineering for innovative solutions. <br> <br>With skills in programming languages, electronics, and 3D design, I seek new challenges and industry experience to drive technological advancements. I'm eager to tackle complex projects that contribute to future-shaping initiatives in technology and engineering.
+      </div>
+    </div>
+  </section>
+</main>
 
-          <a href="{{ url_for('static', filename='Documents/T. Motlhamme CV.pdf') }}" target="_blank">
-            <div class="resume">Click For Resume</div>
-          </a>
-        </div>
-        <div class="aboutTopText">
-          The true sign of intelligence is not knowledge but <span>imagination!</span>
-        </div>
-      </div>
-      <div class="second-half">
-        <div class="aboutMe">A Bit About Me</div>
-        <div class="aboutAbout">
-          <span class="greeting">Hey There!</span><span class="lebitso">I'm Thatohatsi Motlhamme</span>
-          A Mechatronics Engineering graduate from the University of Cape Town, passionate about integrating mechanical, electrical, and computer engineering for innovative solutions. <br> <br>With skills in programming languages, electronics, and 3D design, I seek new challenges and industry experience to drive technological advancements. I'm eager to tackle complex projects that contribute to future-shaping initiatives in technology and engineering.
-        </div>
-      </div>
-    </section>
-  </main>
+<script>
+  const dynamicImage = document.getElementById('dynamic-image');
+  const imageTags = document.getElementById('image-tags');
+  const query = "{{ query }}";
+
+  // Function to fetch a new image every 5 seconds
+  setInterval(async () => {
+    try {
+      const response = await fetch(`/random_image?query=${query}`);
+      if (response.ok) {
+        const data = await response.json();
+        dynamicImage.src = data.image_url;
+        imageTags.textContent = "Tags: " + data.tags;
+      } else {
+        console.error('Failed to fetch new image');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }, 5000); // Change image every 5 seconds
+</script>
 {% endblock %}
