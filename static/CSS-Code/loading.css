@@ -1,0 +1,42 @@
+.loading{
+  position: fixed;
+  background-color: rgb(26, 26, 26);
+  background-image: url("https://www.transparenttextures.com/patterns/pinstripe-light.png");  
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100svh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s, visibility 1s;
+  z-index: 9999;
+}
+
+.loading-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* .loading::after{
+  content: '';
+  width: 10svw;
+  height: 10svw;
+  margin: auto;
+  border-radius: 50%;
+  border: 1svw solid white;
+  border-top-color: var(--accent1);
+  animation: loading 0.75s ease infinite;
+} */
+
+@keyframes loading {
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+  
+}

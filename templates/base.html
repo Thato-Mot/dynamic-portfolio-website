@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title block, will be updated in specific pages -->
+    <title>{% block title %}Thato's Website{% endblock %}</title>
+    <!-- Linking the common stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Additional stylesheets can be included here if needed -->
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <!-- Block for page-specific content -->
+    <div id="cursor"></div>
+    <nav id="nav-bar">
+      <a id="name"></a>
+      <div class="tabs">
+        <!-- Update links to use Flask routing -->
+        <a href="{{ url_for('index') }}" class="sec home">Home</a>
+        <a href="{{ url_for('about') }}" class="sec about">About</a>
+        {% block resume_link %}
+                <a href="{{ url_for('resume') }}" class="sec resume-tab">Resume</a>
+            {% endblock %}
+        <a href="{{ url_for('projects') }}" class="sec project">Projects</a>
+        <a href="{{ url_for('contact') }}" class="sec contact-tab">Contact Me</a>
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="social-media">
+            <a class="footer-icon-box" href="{{ url_for('static', filename='Documents/T. Motlhamme CV.pdf') }}" target="_blank">
+                <img class="footer-icon cv" src="{{ url_for('static', filename='icons/CV.png') }}">
+            </a>
+            <a class="footer-icon-box" href="https://www.linkedin.com/in/thatohatsi-motlhamme-1a02352b8/" target="_blank">
+                <img class="footer-icon" src="{{ url_for('static', filename='icons/In.png') }}">
+            </a>
+            <a class="footer-icon-box" href="https://github.com/Thato-Mot" target="_blank">
+                <img class="footer-icon" src="{{ url_for('static', filename='icons/GIT.png') }}">
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; Thatohatsi Motlhamme
+        </div>
+    </footer>
+
+
+    <!-- JavaScript files can be added here -->
+    
+    <section class="loading">
+      <div class="spinner">
+        <!-- <img src="IMG_5568.JPG" alt="Spinning Image" class="spinning-image"> -->
+      </div>
+    </section>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block themeSwitcher %}
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/themeSwitcher.js') }}"></script> -->
+    
+    {% endblock %}
+    
+</body>
+</html>

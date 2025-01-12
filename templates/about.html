@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %}About Thato{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/general.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/loading.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/aboutsection.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/footer.css') }}">
+{% endblock %}
+
+{% block content %}
+  <main>
+    <section id="about" class="about-divider">
+      <div class="second-half">
+        <div class="aboutMe">
+          A Lot About Me
+        </div>
+        <div class="aboutAbout">
+          <span class="greeting">Hey There!</span><span class="lebitso">I'm Thatohatsi Motlhamme</span>
+          A Mechatronics Engineering graduate from the University of Cape Town, driven by a passion for leveraging technology to solve complex problems. My multidisciplinary background in mechanical, electrical, and computer engineering has equipped me with a versatile skill set, including proficiency in various programming languages, circuit design, and 3D mechanical modelling. As a hardworking and enthusiastic engineer, I'm constantly motivated by the challenge of finding innovative solutions to real-world problems. <br><br>
+          My interests in robotics, control systems, and emerging technologies like AI and machine learning are the driving forces behind my career aspirations. I'm always eager to learn and take on new challenges, whether it's exploring the latest trends in technology or diving into a new project.
+        </div>
+      </div>
+    <div class="first-half">
+      <div class="aboutimage">
+        <img src="{{ url_for('static', filename='Images/4.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+
+        <!-- <img src="SmilingGlasses2.jpg" alt="Picture of Thatohatsi" class="aboutIMG"> -->
+        <!-- <a href="T. Motlhamme CV.pdf" target="_blank">
+        <div class="resume">Click For Resume</div></a> -->
+      </div>
+      <div class="aboutTopText">
+        <!-- The true sign of intelligence is not knowledge but imagination -->
+         <!-- The best way to predict the future is to create it. -->
+         The best way to predict the future is to <span>create it!</span>
+        <!-- Lets do our part in improving the world through <span>Engineering!</span> -->
+      </div>
+    </div>
+  </section>
+    <section id="interests" class="about-divider">
+      <div class="aboutMe">
+        Core Values
+      </div>
+      <div class="interest-container values" id="music">
+        
+        <div class="description-half">
+          <div class="aboutAbout values-description">
+            <span class="lebitso opener">Foundation To Engineering</span>
+            
+            <strong>Innovation</strong> is at the heart of my work ethic. I consistently strive to push boundaries and develop novel solutions to complex problems, always aiming to improve upon existing methods.<br><br>
+            <strong>Integrity</strong> is paramount in my professional conduct. I believe in maintaining the highest standards of honesty and ethical behaviour in all aspects of my work, ensuring reliability and trustworthiness in every project I undertake. <br><br>
+            <strong>Collaboration</strong> is a key principle I uphold. While I excel in independent work, I recognize the power of diverse perspectives and actively seek opportunities to engage in team environments, fostering creativity and comprehensive problem-solving.<br><br>
+            <strong>Continuous learning</strong>  is integral to my professional development. In the rapidly evolving field of technology, I am committed to staying current with the latest advancements, constantly expanding my skill set and knowledge base. <br><br>
+              <strong>Making a meaningful impact</strong>  drives my career aspirations. I am dedicated to applying my skills and knowledge in ways that contribute positively to society and advance technological progress.
+          </div>
+        </div>
+        
+      </div>
+      <div class="aboutMe">
+        Interests
+      </div>
+      <div class="interest-container" id="Mechatronics">
+        <div class="picture-half">
+          <div class="aboutimage collage">
+            <img src="{{ url_for('static', filename='Images/Website/Mechatronics/controlpanel.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/Mechatronics/inductor.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/Mechatronics/PCB1.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/Mechatronics/SignalsThing.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            <!-- <img src="SmilingGlasses2.jpg" alt="Picture of Thatohatsi" class="aboutIMG"> -->
+          </div>
+          <div class="aboutTopText music">
+            <!-- The true sign of intelligence is not knowledge but imagination -->
+             <!-- The best way to predict the future is to create it. -->
+             Creating you own world with <span>electricity!</span>
+            <!-- Lets do our part in improving the world through <span>Engineering!</span> -->
+          </div>
+        </div>
+        <div class="description-half">
+          <div class="aboutAbout">
+            <span class="greeting">Mechatronics!</span><span class="lebitso opener">Well, Of Course!</span>
+            It's like having a superpower. I'm talking about PCB design, where you're basically creating these tiny cities of electronics. Then there's circuit analysis, which is like being a detective, but for electricity. And don't even get me started on wiring and building inductors - it's like playing with the very essence of energy. <br>
+The best part? One minute you're soldering components, the next you're writing code to make them dance. And when you finally get everything hooked up and that motor starts spinning or that LED starts blinking exactly how you planned? Man, that feeling is unreal. <br>
+It's about creating these systems that think and react. Sometimes I'm there, elbow-deep in wires and code, and I think, "Is this how Tony Stark felt?" Because  when you're bringing these creations to life, it really does feel like you're some kind of tech wizard. Mechatronics isn't just an interest - it's like having the keys to reshape the world around you.
+
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="interest-container" id="webdesign">
+        <div class="description-half">
+          <div class="aboutAbout">
+            <span class="greeting">Web Design!</span><span class="lebitso opener">Seeing Is Believing</span>
+            That's where I get to see my code come to life. It's like, you know how in class we're just staring at lines of syntax? Well, I wanted to take that and turn it into something you can actually see and interact with. So, I jumped into web design, and let me tell you, it's addictive. You're typing away, and suddenly boom - you've got this whole visual thing happening right in front of you. It's so fun you don't even realize you're coding half the time. It's more like you're painting with code. One minute you're tweaking CSS, the next you're crafting these slick user interfaces. It's where coding meets art, and I'm all about that blend. Plus, it's instant gratification - you make a change, hit refresh, and there it is. It's like being a digital architect, and I'm here for it.
+          </div>
+        </div>
+        <div class="picture-half">
+          <div class="aboutimage collage">
+            <img src="{{ url_for('static', filename='Images/Website/WebDesign/CenterDiv.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/WebDesign/SpotifyWrapped.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/WebDesign/Code.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/WebDesign/MusicPage.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            
+            <!-- <img src="SmilingGlasses2.jpg" alt="Picture of Thatohatsi" class="aboutIMG"> -->
+          </div>
+          <div class="aboutTopText music">
+            <!-- The true sign of intelligence is not knowledge but imagination -->
+             <!-- The best way to predict the future is to create it. -->
+             <!-- Digital design is like painting, except the paint never dries -->
+             Painting, except the paint never <span>dries!</span>
+            <!-- Lets do our part in improving the world through <span>Engineering!</span> -->
+          </div>
+        </div>
+      </div>
+      <div class="interest-container" id="values">
+        <div class="picture-half">
+          <div class="aboutimage collage">
+            <img src="{{ url_for('static', filename='Images/Bass.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/Musiz/DJ1.png') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Website/Musiz/Drums.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+            <img src="{{ url_for('static', filename='Images/Music/ChurchPic.jpg') }}" alt="Picture of Zuma" class="aboutIMG">
+            <!-- <img src="SmilingGlasses2.jpg" alt="Picture of Thatohatsi" class="aboutIMG"> -->
+           
+          </div>
+          <div class="aboutTopText music">
+            <!-- The true sign of intelligence is not knowledge but imagination -->
+             <!-- The best way to predict the future is to create it. -->
+             Where words leave off, music <span>begins!</span>
+            <!-- Lets do our part in improving the world through <span>Engineering!</span> -->
+          </div>
+        </div>
+        <div class="description-half">
+          <div class="aboutAbout">
+            <span class="greeting">Music!</span><span class="lebitso opener">I've Always Loved Music</span>
+            Music is not just about vibes for me - it's where my engineering mind gets to play. I'm not just calculating filters on paper; I'm making them sing in real life. You'll catch me serving at church, making sure everything sounds heavenly on the sound team. But that's just the start. I've got my hands in music production too, cooking up tracks across different genres. And when it's time to get the party started? I'm your guy behind the decks. I've even rocked the crowd at UCT Day 2023, the Class of 2024 formal, and other events. Oh, and instruments? Yeah, I mess around with those too - guitar, drums, piano, you name it. It's all about bringing those classroom theories to life and creating something that moves people. Whether it's tweaking EQs or laying down beats, I'm all about that perfect sound.
+          </div>
+        </div>
+        
+      </div>
+
+      
+
+      
+    </section>
+    
+  
+  </main>
+  {% endblock %}

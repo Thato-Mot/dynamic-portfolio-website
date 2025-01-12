@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+
+{% block title %}Thato's Resume{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/general.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/loading.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/experience.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/skills.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/navbarhome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/footer.css') }}">
+{% endblock %}
+
+{% block resume_link %}
+<a href="{{ url_for('static', filename='Documents/T. Motlhamme CV.pdf') }}" target="_blank" class="sec resume-tab">Download CV</a>
+{% endblock %}
+
+{% block content %}
+  <main>
+    <section id="experience" >
+      <div class="experience">
+        Experience
+      </div>
+      <div class="XP">
+        <div class="boxExp">
+          <div class="boxLogo">
+            <img src="{{ url_for('static', filename='Images/UCTLogo.png') }}" alt="UCT Logo">
+          </div>
+          <div class="boxTitle">
+            Electrical Engineer Vacation Work
+          </div>
+          <div class="boxCompany">
+            University of Cape Town Machines Laboratory
+          </div>
+          <div class="boxPeriod">
+            June 2023 - July 2023
+          </div>
+          <div class="boxDesc">
+            Analysed and modified a star-delta starter panel to reduce starting current of induction motors. Enhanced efficiency and corrected errors in control panel schematics using EPLAN software. Improved problem-solving and troubleshooting skills in electrical systems.
+          </div>
+          <div class="skillset">
+            <div class="skill">Circuit Design and Analysis</div>
+            <div class="skill">Panel Wiring</div>
+          </div>
+  
+        </div>
+        <div class="boxExp">
+          <div class="boxLogo Mizana">
+            <img src="{{ url_for('static', filename='Images/Mizana Logo.png') }}" alt="Mizana Logo">
+          </div>
+          <div class="boxTitle">
+            Mechatronics Engineer Vacation Work
+          </div>
+          <div class="boxCompany">
+            Mizana Engineering and Services Pty (Ltd)
+          </div>
+          <div class="boxPeriod">
+            June 2022 - August 2022
+          </div>
+          <div class="boxDesc">
+            Conducted diagnostics and repairs on induction motors, assembled and tested water pumps, and introduced a new in-house testing method for operational integrity. Developed advanced troubleshooting and problem-solving techniques.
+          </div>
+          <div class="skillset">
+            <div class="skill">Quality Control</div>
+            <div class="skill">Motor Maintenance</div>
+            <div class="skill">Admin</div>
+  
+          </div>
+  
+        </div>
+  
+        <div class="boxExp tutoring">
+          <div class="boxLogo">
+            <img src="{{ url_for('static', filename='Images/UCTLogo.png') }}" alt="UCT Logo">
+          </div>
+          <div class="boxTitle">
+            Tutoring Experience
+          </div>
+          <div class="boxCompany">
+            University of Cape Town
+          </div>
+          <div class="boxPeriod">
+            February 2024 - June 2024
+          </div>
+          <div class="boxDesc">
+            <span>Embedded Systems I:</span> Assisted students in understanding key concepts of digital systems and microcontroller programming. Provided guidance on practical exercises and projects, helping students apply theoretical knowledge to real-world applications.
+          </div>
+          <div class="boxPeriod">
+            July 2024 - November 2024
+          </div>
+          <div class="boxDesc">
+            <span>Embedded Systems II:</span> Guided students through microprocessor architectures and embedded operating systems. Supported practical sessions involving the UCT STM board, helping students with simulation, programming, and system design. Facilitated project work, offering insights and assistance to enhance students’ learning experiences.          
+          </div>
+          <div class="skillset">
+            <div class="skill">Embedded Systems</div>
+  
+          </div>
+  
+        </div>
+      </div>
+      <div class="skills">
+        Education
+      </div>
+      <section id="education">
+        
+        <div class="XP">
+          <div class="boxExp">
+            <div class="boxLogo">
+              <img src="{{ url_for('static', filename='Images/UCTLogo.png') }}" alt="UCT Logo">
+            </div>
+            <div class="boxTitle">
+              BSc Eng. in Mechatronics
+            </div>
+            <div class="boxCompany">
+              University of Cape Town
+            </div>
+            <div class="boxPeriod">
+              2021 - 2024
+            </div>
+            <div class="boxDesc">
+              Specialisation in Mechatronics. Recipient of multiple awards, including the Dean’s List Academic Achievement Award (2021-2024), Kopano 2021 Top Achiever award, Woolsack Residence 2023 Top Achiever award, and the Peralex Electronics Prize for achieving the top position in EEE3096S – Embedded Systems II in 2023.
+            </div>
+            <div class="skillset">
+              <div class="skill">Mechatronics</div>
+              <div class="skill">Embedded Systems</div>
+            </div>
+          </div>
+      
+          <div class="boxExp">
+            <a href="https://www.facebook.com/RHSZA/posts/934ebdbd/4098054400228934/" target="_blank">
+              <div class="boxLogo">
+                <img src="{{ url_for('static', filename='Images/RHSLogo.png') }}" alt="RHS Logo">
+              </div>
+            </a>
+            
+            <div class="boxTitle">
+              High School Qualification
+            </div>
+            <div class="boxCompany">
+              Roosevelt High School
+            </div>
+            <div class="boxPeriod">
+              2016 - 2020
+            </div>
+            <div class="boxDesc">
+              Achieved academic full colours and was ranked in the top ten academically each year. Actively contributed to the school committee in 2019 and served as a leader in the Representative Council of Learners in 2020. Awarded for having the second highest academic average at graduation.
+            </div>
+            <div class="skillset">
+              <div class="skill">Leadership</div>
+              <div class="skill">Academic Excellence</div>
+            </div>
+          </div>
+        </div>
+      
+        
+      </section>
+      <div class="skills">Skills</div>
+    </section>
+    
+      <section id="skills">
+        
+        <div class="skillBox">
+          <div class="skill-title">Programming Languages</div>
+          <div class="BoxSkill">
+            <div class="skill">Python</div>
+            <div class="skill">C</div>
+            <div class="skill">Java</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+          </div>
+        </div>
+  
+      <div class="skillBox">
+      <div class="skill-title">Software and Tools</div>
+      <div class="BoxSkill">
+        <div class="skill">MATLAB</div>
+        <div class="skill">LTSpice</div>
+        <div class="skill">KiCAD</div>
+        <div class="skill">EPLAN</div>
+        <div class="skill">SOLIDWORKS</div>
+        <div class="skill">Altium Designer</div>
+        <div class="skill">Adobe Photoshop and Premier Pro</div>
+      </div>
+      </div>
+    <div class="skillBox">
+      <div class="skill-title">Engineering Skills</div>
+      <div class="BoxSkill">
+        <div class="skill">Circuit Design</div>
+        <div class="skill">Circuit Analysis</div>
+        <div class="skill">PCB Design</div>
+        <div class="skill">Embedded Systems</div>
+        <div class="skill">Power Systems Design</div>
+        <div class="skill">Electronics</div>
+      </div>
+    </div>
+    <div class="skillBox">
+      <div class="skill-title">Professional Skills</div>
+      <div class="BoxSkill">
+        <div class="skill">Technical Writing</div>
+        <div class="skill">Mentoring</div>
+        <div class="skill">Tutoring</div>
+        <div class="skill">Collaborative Problem Solving</div>
+      </div>
+    </div>
+    
+    <div class="skillBox">
+      <div class="skill-title">Soft Skills</div>
+      <div class="BoxSkill">
+        <div class="skill">Critical Thinking</div>
+        <div class="skill">Creative Writing</div>
+        <div class="skill">Time Management</div>
+        <div class="skill">Adaptability</div>
+        <div class="skill">Leadership</div>
+        <div class="skill">Communication</div>
+      </div>
+    </div>     
+
+    <div class="skillBox">
+      <div class="skill-title">Certifications and Badges</div>
+      <div class="BoxSkill">
+        <div class="skill">AWS Educate Getting Started (Storage, Networking, Computing) </div>
+        <div class="skill">AWS Educate Introduction to Cloud 101</div>
+        <div class="skill">Responsive Web Design</div>
+      </div>
+    </div> 
+    
+    <!-- <div class="contact">Contact Me</div> -->
+      </section>
+    
+  </main>
+  {% endblock %}
+  

@@ -1,0 +1,338 @@
+/* Fonts */
+
+@font-face {
+  font-family: Monday Champions;
+  src: url(fonts/Monday\ Champions.otf);
+}
+@font-face {
+  font-family: Painter Personal Use Only;
+  src: url(fonts/Painter_PERSONAL_USE_ONLY.ttf);
+}
+
+@font-face {
+  font-family: Blissful;
+  src: url(fonts/Blissful.otf);
+}
+
+
+:root {
+  /* Default Dark Charcoal-Burgundy-White ----- Default*/
+  --background: rgb(20, 20, 20);
+  --background-gradient: rgb(30, 30, 30);
+  --text-color: rgb(255, 255, 255);
+  --text-color2: rgb(20, 20, 20);
+  --accent1: rgb(65, 105, 225);
+  --accent2: rgb(50, 90, 200);
+  --accent3: rgb(40, 70, 180);
+  --accent1-glow: rgba(65, 105, 225, 0.8);
+  --cursor-gradient-start: rgba(65, 105, 225, 0.5); /* Light blue shade */
+  --cursor-gradient-end: rgba(65, 105, 225, 0.1); /* More transparent */
+  --navBar-angle: 90deg;
+  --glass-background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255,255,255, 0));
+  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+  --glass-shadow: -0.5vw 0.5vw 1vw rgb(0, 0, 0);
+  --glass-background2: linear-gradient(135deg, rgba(255, 255, 255, 0.44), rgba(255,255,255, 0.4));
+
+
+  --border-glass-shadow: inset 0 0 10px rgba(0, 0, 0, 0.695);
+}
+
+/* Dark Mode with Mint Accent */
+[data-theme="mint"] {
+  --background: rgb(18, 18, 18);
+  --background-gradient: rgb(28, 28, 28);
+  --text-color: rgb(255, 255, 255);
+  --text-color2: rgb(18, 18, 18);
+  --accent1: rgb(62, 180, 137);
+  --accent2: rgb(45, 168, 130);
+  --accent3: rgb(35, 155, 120);
+  --accent1-glow: rgba(62, 180, 137, 0.8);
+  --cursor-gradient-start: rgba(62, 180, 137, 0.5); /* Light mint shade */
+  --cursor-gradient-end: rgba(62, 180, 137, 0.1);
+}
+
+/* Dark Mode with Royal Blue Accent */
+[data-theme="blue"] {
+  --background: rgb(20, 20, 20);
+  --background-gradient: rgb(30, 30, 30);
+  --text-color: rgb(255, 255, 255);
+  --text-color2: rgb(20, 20, 20);
+  --accent1: rgb(65, 105, 225);
+  --accent2: rgb(50, 90, 200);
+  --accent3: rgb(40, 70, 180);
+  --accent1-glow: rgba(65, 105, 225, 0.8);
+  --cursor-gradient-start: rgba(65, 105, 225, 0.5); /* Light blue shade */
+  --cursor-gradient-end: rgba(65, 105, 225, 0.1);
+}
+
+/* Dark Mode with Deep Burgundy Accent */
+[data-theme="burgundy"] {
+  --background: rgb(26, 26, 26);
+  --background-gradient: rgb(34, 34, 34);
+  --text-color: rgb(240, 240, 240);
+  --text-color2: rgb(26, 26, 26);
+  --accent1: rgb(128, 0, 32);
+  --accent2: rgb(150, 0, 38);
+  --accent3: rgb(180, 0, 45);
+  --accent1-glow: rgba(128, 0, 32, 0.8);
+  --cursor-gradient-start: rgba(128, 0, 32, 0.5); /* Same as default */
+  --cursor-gradient-end: rgba(128, 0, 32, 0.1);
+}
+
+/* Light Mode with Soft Blue Accent */
+[data-theme="light"] {
+  --background: rgb(255, 255, 255);
+  --background-gradient: rgb(240, 240, 240);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(255, 255, 255);
+  --accent1: rgb(100, 149, 237);
+  --accent2: rgb(70, 130, 180);
+  --accent3: rgb(0, 191, 255);
+  --accent1-glow: rgba(100, 149, 237, 0.8);
+  --cursor-gradient-start: rgba(100, 149, 237, 0.5); /* Light blue shade */
+  --cursor-gradient-end: rgba(100, 149, 237, 0.1);
+}
+
+/* Dark Mode with Teal Accent */
+[data-theme="teal"] {
+  --background: rgb(34, 34, 34);
+  --background-gradient: rgb(45, 45, 45);
+  --text-color: rgb(255, 255, 255);
+  --text-color2: rgb(34, 34, 34);
+  --accent1: rgb(0, 128, 128);
+  --accent2: rgb(0, 102, 102);
+  --accent3: rgb(0, 76, 76);
+  --accent1-glow: rgba(0, 128, 128, 0.8);
+  --cursor-gradient-start: rgba(0, 128, 128, 0.5); /* Light teal shade */
+  --cursor-gradient-end: rgba(0, 128, 128, 0.1);
+}
+
+/* Dark Mode with Purple Accent */
+[data-theme="purple"] {
+  --background: rgb(30, 30, 30);
+  --background-gradient: rgb(40, 40, 40);
+  --text-color: rgb(255, 255, 255);
+  --text-color2: rgb(30, 30, 30);
+  --accent1: rgb(128, 0, 128);
+  --accent2: rgb(102, 0, 102);
+  --accent3: rgb(76, 0, 76);
+  --accent1-glow: rgba(128, 0, 128, 0.8);
+  --cursor-gradient-start: rgba(128, 0, 128, 0.5); /* Light purple shade */
+  --cursor-gradient-end: rgba(128, 0, 128, 0.1);
+}
+
+/* Dark Mode with Deep Green Accent */
+[data-theme="green"] {
+  --background: rgb(20, 20, 20);
+  --background-gradient: rgb(30, 30, 30);
+  --text-color: rgb(255, 255, 255);
+  --text-color2: rgb(20, 20, 20);
+  --accent1: rgb(0, 128, 0);
+  --accent2: rgb(0, 102, 0);
+  --accent3: rgb(0, 76, 0);
+  --accent1-glow: rgba(0, 128, 0, 0.8);
+  --cursor-gradient-start: rgba(0, 128, 0, 0.5); /* Light green shade */
+  --cursor-gradient-end: rgba(0, 128, 0, 0.1);
+}
+
+/* Light Mode with Soft Pink Accent */
+[data-theme="pink"] {
+  --background: rgb(255, 240, 245);
+  --background-gradient: rgb(255, 230, 240);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(255, 240, 245);
+  --accent1: rgb(255, 105, 180);
+  --accent2: rgb(255, 20, 147);
+  --accent3: rgb(255, 182, 193);
+  --accent1-glow: rgba(255, 105, 180, 0.8);
+  --cursor-gradient-start: rgba(255, 105, 180, 0.5); /* Light pink shade */
+  --cursor-gradient-end: rgba(255, 105, 180, 0.1);
+}
+
+/* Light Mode with Warm Orange Accent */
+[data-theme="orange"] {
+  --background: rgb(255, 250, 240);
+  --background-gradient: rgb(255, 240, 220);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(255, 250, 240);
+  --accent1: rgb(255, 140, 0);
+  --accent2: rgb(255, 165, 0);
+  --accent3: rgb(255, 69, 0);
+  --accent1-glow: rgba(255, 140, 0, 0.8);
+  --cursor-gradient-start: rgba(255, 140, 0, 0.5); /* Light orange shade */
+  --cursor-gradient-end: rgba(255, 140, 0, 0.1);
+}
+
+/* Light Mode with Fresh Green Accent */
+[data-theme="fresh-green"] {
+  --background: rgb(240, 255, 240);
+  --background-gradient: rgb(220, 255, 220);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(240, 255, 240);
+  --accent1: rgb(0, 255, 0);
+  --accent2: rgb(50, 205, 50);
+  --accent3: rgb(34, 139, 34);
+  --accent1-glow: rgba(0, 255, 0, 0.8);
+  --cursor-gradient-start: rgba(0, 255, 0, 0.5); /* Light green shade */
+  --cursor-gradient-end: rgba(0, 255, 0, 0.1);
+}
+
+/* Colorful Theme with Bright Red Accent */
+[data-theme="red"] {
+  --background: rgb(255, 240, 240);
+  --background-gradient: rgb(255, 220, 220);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(255, 240, 240);
+  --accent1: rgb(255, 0, 0);
+  --accent2: rgb(200, 0, 0);
+  --accent3: rgb(139, 0, 0);
+  --accent1-glow: rgba(255, 0, 0, 0.8);
+  --cursor-gradient-start: rgba(255, 0, 0, 0.5); /* Light red shade */
+  --cursor-gradient-end: rgba(255, 0, 0, 0.1);
+}
+
+/* Colorful Theme with Electric Blue Accent */
+[data-theme="electric-blue"] {
+  --background: rgb(240, 248, 255);
+  --background-gradient: rgb(220, 230, 250);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(240, 248, 255);
+  --accent1: rgb(0, 255, 255);
+  --accent2: rgb(0, 204, 204);
+  --accent3: rgb(0, 153, 153);
+  --accent1-glow: rgba(0, 255, 255, 0.8);
+  --cursor-gradient-start: rgba(0, 255, 255, 0.5); /* Light cyan shade */
+  --cursor-gradient-end: rgba(0, 255, 255, 0.1);
+}
+
+/* Colorful Theme with Vibrant Purple Accent */
+[data-theme="vibrant-purple"] {
+  --background: rgb(240, 230, 250);
+  --background-gradient: rgb(230, 220, 255);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(240, 230, 250);
+  --accent1: rgb(138, 43, 226);
+  --accent2: rgb(123, 104, 238);
+  --accent3: rgb(75, 0, 130);
+  --accent1-glow: rgba(138, 43, 226, 0.8);
+  --cursor-gradient-start: rgba(138, 43, 226, 0.5); /* Light purple shade */
+  --cursor-gradient-end: rgba(138, 43, 226, 0.1);
+}
+
+/* Colorful Theme with Sunny Yellow Accent */
+[data-theme="yellow"] {
+  --background: rgb(255, 255, 224);
+  --background-gradient: rgb(255, 255, 192);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(255, 255, 224);
+  --accent1: rgb(255, 255, 0);
+  --accent2: rgb(255, 255, 128);
+  --accent3: rgb(255, 255, 224);
+  --accent1-glow: rgba(255, 255, 0, 0.8);
+  --cursor-gradient-start: rgba(255, 255, 0, 0.5); /* Light yellow shade */
+  --cursor-gradient-end: rgba(255, 255, 0, 0.1);
+}
+
+/* Colorful Theme with Cool Cyan Accent */
+[data-theme="cyan"] {
+  --background: rgb(224, 255, 255);
+  --background-gradient: rgb(192, 255, 255);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(224, 255, 255);
+  --accent1: rgb(0, 255, 255);
+  --accent2: rgb(0, 204, 204);
+  --accent3: rgb(0, 153, 153);
+  --accent1-glow: rgba(0, 255, 255, 0.8);
+  --cursor-gradient-start: rgba(0, 255, 255, 0.5); /* Light cyan shade */
+  --cursor-gradient-end: rgba(0, 255, 255, 0.1);
+}
+
+/* Colorful Theme with Lively Green Accent */
+[data-theme="lively-green"] {
+  --background: rgb(240, 255, 240);
+  --background-gradient: rgb(220, 255, 220);
+  --text-color: rgb(30, 30, 30);
+  --text-color2: rgb(240, 255, 240);
+  --accent1: rgb(0, 255, 0);
+  --accent2: rgb(50, 205, 50);
+  --accent3: rgb(34, 139, 34);
+  --accent1-glow: rgba(0, 255, 0, 0.8);
+  --cursor-gradient-start: rgba(0, 255, 0, 0.5); /* Light green shade */
+  --cursor-gradient-end: rgba(0, 255, 0, 0.1);
+}
+
+#cursor {
+  position: fixed;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+              var(--cursor-gradient-start) 0%, 
+              var(--cursor-gradient-end) 20%, 
+              transparent 50%);
+  pointer-events: none;
+  z-index: -9999;
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(var(--background) 0%, var(--background) 60%, var(--background-gradient) 90%); */
+  background-color: var(--background);
+  background-image: url("https://www.transparenttextures.com/patterns/pinstripe-light.png");  overflow-x: hidden;
+  color: var(--text-color);
+  font-family: Blissful;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* body::-webkit-scrollbar{
+  display: none;
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 1000px){
+
+#cursor{
+  position: fixed;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+  var(--cursor-gradient-start) 0%, 
+  var(--cursor-gradient-end) 20%, 
+  transparent 50%);
+  pointer-events: none;
+  z-index: -10000;
+}
+main {
+  width: 100%;
+  /* margin: auto; */
+  margin-top: 2vw;
+
+}
+
+}
+
+@media (max-width: 700px) {
+  main {
+    width: 100%;
+    margin-top: 4vw;
+  
+  }
+
+  #cursor{
+    display: none;
+  }
+}
+

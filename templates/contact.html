@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Me{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/general.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/loading.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/contact.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/navbarhome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/footer.css') }}">
+{% endblock %}
+  
+{% block content %}
+  <main>
+    <section id="contact">
+      <div class="contact">
+        Contact Me
+      </div>
+      <div class="icons">
+        <a href="mailto:thatohatsimotlhamme@gmail.com">
+          <img src="{{ url_for('static', filename='icons/email-3.png') }}" alt="Email" class="icon">
+        </a>
+        <a href="Documents/T. Motlhamme CV.pdf" target="_blank">
+          <img src="{{ url_for('static', filename='icons/image.png') }}" alt="Download CV" class="icon cv1">
+        </a>
+        <a href="https://www.linkedin.com/in/thatohatsi-motlhamme-1a02352b8/" target="_blank">
+          <img src="{{ url_for('static', filename='icons/In.png') }}" alt="LinkedIn" class="icon">
+        </a>
+        <a href="https://github.com/Thato-Mot" target="_blank">
+          <img src="{{ url_for('static', filename='icons/GIT.png') }}" alt="GitHub" class="icon">
+        </a>
+      </div>
+      <form id="contact-form" action="https://formsubmit.co/def557222c46594f2ee6d515d96df3e1" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="user-name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    
+        <button type="submit" id="btn">Submit</button>
+    </form>
+    </section>
+  </main>
+{% endblock %}

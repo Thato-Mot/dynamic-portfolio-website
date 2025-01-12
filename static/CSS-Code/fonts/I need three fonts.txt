@@ -1,0 +1,24 @@
+I need three fonts
+
+Main font
+----------
+https://fonts.adobe.com/fonts/abhaya-libre
+https://fonts.adobe.com/fonts/alegreya-sans-sc
+https://fonts.adobe.com/fonts/aleo
+https://fonts.adobe.com/fonts/faustina
+https://fonts.adobe.com/fonts/grenze-gotisch
+https://fonts.adobe.com/fonts/josefin-slab
+https://fonts.adobe.com/fonts/josefin-sans
+
+Section font
+------------
+https://fonts.adobe.com/fonts/allura
+https://fonts.adobe.com/fonts/caveat-brush
+https://fonts.adobe.com/fonts/estonia
+https://fonts.adobe.com/fonts/kings
+
+Decorative font
+---------------
+https://fonts.adobe.com/fonts/alex-brush
+https://fonts.adobe.com/fonts/birthstone
+https://fonts.adobe.com/fonts/birthstone-bounce

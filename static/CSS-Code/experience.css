@@ -1,0 +1,449 @@
+#experience {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  padding-bottom: 0;
+  /* border: 1px solid yellow; */
+  /* position: relative;
+  top: -2vw; */
+  position: relative;
+}
+
+.XP{
+  display: flex;
+  flex-direction: row; /* row is the x axis and column is the y axis*/
+  flex: 1 1; /* to set how many you want*/
+  flex-wrap: wrap;
+  justify-content: center; /*to center it on the y*/
+  align-items: center; /*to center it on the x*/
+  gap: 2vw; /*gap between them*/
+  padding-bottom: 0;  
+  position: relative;
+}
+
+.resume-tab{
+  text-shadow: 0 1vw 0.5vw var(--accent1);
+}
+
+.experience {
+  font-size: 12vw;
+  font-weight: 200;  
+  background: transparent;
+  text-align: left;
+  height: max-content;
+  color: var(--text-color);
+  text-shadow: -0.8vw 0.8vw 0.4vw var(--accent1);
+  font-family: Monday Champions, Painter Personal Use Only;
+  transform: rotate(-5deg);
+  
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.experience:hover{
+  
+  text-shadow: 0vw 0vw 0.4vw var(--accent1);
+}
+
+
+.boxExp{
+  /* border: 1px solid yellow; */
+  background: var(--glass-background);
+  opacity: 1;
+  border-radius: 10px;
+  border: var(--glass-border);
+  padding: 2vw;
+  padding-bottom: 5vw;
+  width: 43.5vw;
+  height: 35vw;
+
+  color: var(--text-color1);
+  /* box-shadow: 0 0 1vw var(--accent1-glow); */
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
+
+
+.tutoring{
+  height: max-content;
+}
+
+.tutoring .boxDesc span{
+  font-weight: bold;
+}
+
+.boxTitle{
+  display: block;
+  font-size: 3vw;
+  font-weight: bold;
+  width: 80%;
+  margin: auto;
+  text-wrap: pretty;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1vw;
+}
+
+.boxTitle::after{
+  content: '';
+  width: 50%;
+  height: 2px;
+  background-color: var(--text-color1);
+  position: absolute;
+  top: 6.8vw;
+  left: 7.1vw;
+}
+
+
+.boxCompany{
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 0.7vw;
+  text-align: center;
+}
+
+.boxPeriod{
+  font-size: 1.65vw;
+  margin-bottom: 0.7vw;
+}
+
+.boxDesc{
+  position: relative;
+  margin-top: 2vw;
+  font-size: 1.65vw;
+  margin-bottom: 0.7vw;
+}
+
+.boxDesc::before{
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+  box-shadow: var(--border-glass-shadow);
+  border-radius: 5px;
+  position: absolute;
+  top: -1.3vw;
+  left: 0vw;
+}
+
+.skillset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  /* border: 1px solid rgb(0, 0, 0); */
+  height: 2.8vw;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.2vw 1vw;
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+}
+
+.skill{
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--accent1);
+  padding: 0.4vw 1vw;
+  border-radius: 5px;
+}
+
+.boxLogo {
+  position: absolute;
+  bottom: 1.7vw;
+  left: 1.5vw;
+  width: 2vw;
+  height: 2vw;
+}
+
+.boxLogo img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+
+.Mizana {
+  width: 6vw;
+  height: 6vw;
+  position: absolute;
+  bottom: -2.2vw;
+  left: 1.5vw;
+  
+}
+
+@media (max-width: 1010px){
+  main{
+    margin: 0;;
+    position: relative;
+    top: -8vw;
+  }
+  .resume-tab{
+    text-shadow: none;
+    color: var(--accent1);
+  }
+  #experience {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    
+    position: relative;
+    top: 6vw;
+    
+  }
+  .experience {
+    font-size: 18vw;
+    font-weight: 200; 
+    text-align: center;
+   
+
+  }
+  .boxExp{
+    padding: 2vw;
+    width: 90%;
+    height: max-content;
+    box-shadow: var(--glass-shadow);
+    position: relative;
+    padding-bottom: 8vw;
+  }
+
+  .boxDesc::before{
+    content: '';
+  width: 100%;
+  height: 15px;
+  background-color: transparent;
+  box-shadow: var(--border-glass-shadow);
+  border-radius: 5px;
+  position: absolute;
+  top: -2.3vw;
+  left: 0vw;
+  }
+ 
+
+  .tutoring .boxTitle::after{
+    content: '';
+    width: 80%;
+    height: 0px;
+    background-color: transparent;
+    box-shadow: var(--border-glass-shadow);
+    position: absolute;
+    top: 6vw;
+    left: 10%;
+
+  }
+
+
+  .boxTitle{
+    font-size: 5vw;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 2vw;
+  }
+
+  .boxTitle::after{
+    content: '';
+    width: 61%;
+    height: 2px;
+    position: absolute;
+    top: 11vw;
+    left: 20%;
+  }
+
+  .boxCompany{
+    font-size: 3vw;
+    margin-bottom: 0.7vw;
+    text-align: center;
+  }
+  
+  .boxPeriod{
+    font-size: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .boxDesc{
+    position: relative;
+    margin-top: 1.2vw;
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+  }
+
+
+  .skillset {
+    /* border: 1px solid rgb(0, 0, 0); */
+    height: 4vw;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.2vw 1vw;
+    bottom: 2vw;
+  }
+  
+  .skill{
+    font-size: 2.6vw;
+    font-weight: bold;
+    padding: 1vw 1vw;
+    border-radius: 5px;
+  }
+
+  .boxLogo {
+    position: absolute;
+    bottom: 2.5vw;
+    left: 2.5vw;
+    width: 4.3vw;
+    height: 4.3vw;
+  }
+  
+  .boxLogo img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+  }
+  
+  .Mizana {
+    width: 9vw;
+    height: 6vw;
+    position: absolute;
+    bottom: 0vw;
+    left: 3vw;
+    
+  }
+  
+
+
+
+
+}
+
+@media (max-width: 700px){
+  #experience {
+    gap: 2vw;
+    
+    position: relative;
+    top: 8vw;
+  }
+  .boxExp{
+    padding: 2vw;
+    width: 90vw;
+    
+    box-shadow: var(--glass-shadow);
+    position: relative;
+    padding-bottom: 10vw;
+  }
+
+
+  .boxTitle{
+    font-size: 6vw;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 2vw;
+  }
+
+  .boxTitle::after{
+    content: '';
+    width: 61%;
+    height: 2px;
+    position: absolute;
+    top: 13vw;
+    left: 20%;
+  }
+
+  .boxCompany{
+    font-size: 3vw;
+    margin-bottom: 1vw;
+    text-align: center;
+  }
+  
+  .boxPeriod{
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .boxDesc{
+    position: relative;
+    margin-top: 3vw;
+    /* font-size: 3.3vw; */
+    margin-bottom: 1.5vw;
+  }
+
+  .boxDesc::before{
+    content: '';
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    box-shadow: var(--border-glass-shadow);
+    position: absolute;
+    top: -2.5vw;
+    left: 0vw;
+  }
+
+  .skillset {
+    /* border: 1px solid rgb(0, 0, 0); */
+    height: 5vw;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.2vw 1vw;
+    position: absolute;
+    bottom: 2vw;
+    right: 2vw;
+  }
+  
+  .skill{
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 1vw 1vw;
+    border-radius: 5px;
+  }
+
+  .boxLogo {
+    position: absolute;
+    bottom: 2.5vw;
+    left: 2.5vw;
+    width: 4.3vw;
+    height: 4.3vw;
+  }
+  
+  .boxLogo img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+  }
+  
+  .Mizana {
+    width: 9vw;
+    height: 6vw;
+    position: absolute;
+    bottom: 0vw;
+    left: 3vw;
+    
+  }
+  
+  
+}
+
+@media (max-width: 500px){
+  #experience {
+    gap: 2vw;
+    
+    position: relative;
+    top: 4vw;
+  }
+  .skill{
+    font-size: 2.5vw;
+  }
+  .boxDesc::before{
+    height: 6px;
+    background-color: transparent;
+    box-shadow: var(--border-glass-shadow);
+    top: -2.4vw;
+    left: 0vw;
+  }
+  
+}
+

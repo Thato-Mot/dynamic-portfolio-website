@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %}Thato's Projects{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/general.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/loading.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/projects.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/navbarhome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS-Code/footer.css') }}">
+  {% endblock %}
+
+{% block content %}
+  <main>
+    <section id="projects">
+      <div class="projects">
+        Projects
+      </div>
+      <div class="boxProj">
+        <div class="projImageBox">
+          <div class="projTitle">
+            Line Following and Object Detection Robot
+          </div>
+          <div class="projCompany">
+            University of Cape Town
+          </div>
+          <div class="gifbox">
+
+          </div>
+          <!-- <img src="Images/RobotGif.gif" alt="Line Following Robot"> -->
+          <div class="ProjSkillset">
+            <div class="skill">Mechatronics Design</div>
+          </div>
+        </div>
+        <div class="projInfo">
+          
+          
+          <div class="projDesc">
+            The project aimed to develop a robot capable of navigating a maze, detecting objects, measuring their distance from lines, and returning to the closest object near a detect line.<br>
+            My role involved designing the control system and localization using MATLAB. Responsibilities included:
+            <ul>
+                <li><strong>Control System Design:</strong> Developing algorithms for accurate line-following.</li>
+                <li><strong>Object Detection:</strong> Implementing methods to measure object distance from detect lines.</li>
+                <li><strong>Localization:</strong> Creating a system for tracking the robot’s position and returning to the closest object.</li>
+                <li><strong>Integration and Testing:</strong> Ensuring the cohesive operation of all components.</li>
+            </ul>
+        </div>
+          
+        </div>
+        
+
+      </div>
+      <div class="boxProj">
+        
+        <div class="projImageBox">
+          <div class="projTitle">
+            Power Management System for Remote Camera Trap
+          </div>
+          <div class="projCompany">
+            University of Cape Town
+          </div>
+          <div class="gifbox power">
+
+          </div>
+          <!-- <img class="CameraTrap" src="Images/CameraTrapPower.jpg" alt="Line Following Robot">
+          <img class="Schematic" src="Images/CameraTrapSchematic.png" alt=""> -->
+          <div class="ProjSkillset trap">
+            <div class="skill">Power Systems Design</div>
+          </div>
+        </div>
+        <div class="projInfo">
+          
+          
+          <div class="projDesc">
+            Designing a power subsystem to ensure continuous operation of a camera trap for monitoring Fork-tailed Drongos in the Kalahari Desert, addressing challenges such as extreme temperatures, dust, and power reliability.<br />
+            My role involved:
+    <ul>
+        <li><strong>Power Supply Integration:</strong> Incorporating solar panels and rechargeable batteries.</li>
+        <li><strong>Voltage Regulation:</strong> Ensuring stable and reliable power output.</li>
+        <li><strong>Environmental Adaptation:</strong> Addressing temperature and dust challenges.</li>
+        <li><strong>Power Management:</strong> Optimizing energy use for continuous operation.</li>
+    </ul>
+          </div>
+          
+        </div>
+
+      </div>
+      <div class="boxProj">
+        
+        <div class="projImageBox">
+            <div class="projTitle">
+                Bird Call Classification Using Machine Learning
+            </div>
+            <div class="projCompany">
+                University of Cape Town
+            </div>
+            <div class="gifbox birdcalls">
+              
+              <!-- <img class="Spectrogram" src="Images/Research_1.jpg" alt=""> -->
+            </div>
+            <!-- <img class="BirdCalls" src="Images/BirdCallProject.jpg" alt="Bird Call Classification">
+            <img class="Spectrogram" src="Images/BirdCallSpectrogram.png" alt=""> -->
+            <div class="ProjSkillset bird">
+                <div class="skill">Machine Learning</div>
+            </div>
+        </div>
+        <div class="projInfo">
+        
+          <div class="projDesc">
+              Investigating machine learning techniques for the automated classification of bird species based on their vocalisations. The project aims to support biodiversity monitoring and conservation through advanced bioacoustic analysis.<br />
+              My role involved:
+              <ul>
+                  <li><strong>Feature Engineering:</strong> Extracting and analysing features like MFCCs, Mel spectrograms, and Chroma features.</li>
+                  <li><strong>Model Development:</strong> Evaluating traditional models (e.g., Random Forests) and deep learning architectures (e.g., CNNs).</li>
+                  <li><strong>Data Augmentation:</strong> Implementing techniques such as pitch shifting and noise addition to enhance model robustness.</li>
+                  <li><strong>Evaluation:</strong> Testing models under real-world conditions to assess generalisation and performance, achieving:<br />
+                      - <strong>Random Forest Accuracy:</strong> 72.3%<br />
+                      - <strong>SVM Accuracy:</strong> 74.4%<br />
+                      - <strong>VGG-16 Transfer Learning Accuracy:</strong> 89.2%
+                  </li>
+              </ul>
+          </div>
+          
+        </div>
+
+    </div>
+    <div class="boxProj">
+      <div class="projImageBox">
+          <div class="projTitle">
+              Star/Delta Starter Circuit Analysis and Modification
+          </div>
+          <div class="projCompany">
+              University of Cape Town (Machines Laboratory)
+          </div>
+          <div class="gifbox starter-circuit">
+              <!-- Optional: Add an image related to the project -->
+              <!-- <img class="StarterCircuit" src="Images/StarterCircuitProject.jpg" alt="Starter Circuit Analysis"> -->
+          </div>
+          <div class="ProjSkillset circuit">
+              <div class="skill">Panel Wiring</div>
+              
+          </div>
+      </div>
+      <div class="projInfo">
+          <div class="projDesc">
+              Analysed, modified, and tested a star/delta starter panel for reducing starting current in induction motors. Improved efficiency, corrected wiring issues, and ensured proper functionality through schematic design and rewiring.<br />
+              My role involved:
+              <ul>
+                  <li><strong>Schematic Design:</strong> Produced accurate circuit schematics for both the unmodified and modified panels.</li>
+                  <li><strong>Panel Modification:</strong> Rewired and labelled all connections, improved efficiency by reordering components, and ensured electrical isolation between control and power circuits.</li>
+                  <li><strong>Testing and Troubleshooting:</strong> Performed continuity tests, identified issues like improper coil voltages, and implemented solutions including a step-up transformer.</li>
+                  <li><strong>Results:</strong> Achieved a fully functional control circuit and optimised panel wiring for future testing and modifications.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  
+    
+      
+
+    </section>
+  </main>
+  {% endblock %}

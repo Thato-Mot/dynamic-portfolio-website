@@ -1,0 +1,152 @@
+#skills{
+  margin-top: 0vw;
+  display: flex;
+  flex: 1 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 13vw; */
+  padding: 1vw;
+  /* gap: 3vw; */
+  row-gap: 2vw;
+  column-gap: 2vw;
+}
+
+.skills{
+  display: block;
+  font-size: 12vw;
+  font-weight: 200;  
+  background: transparent;
+  text-align: left;
+  height: max-content;
+  color: var(--text-color);
+  text-shadow: -0.8vw 0.8vw 0.4vw var(--accent1);
+  font-family: Monday Champions, Painter Personal Use Only;
+  transform: rotate(-5deg);
+  /* position: absolute;
+  bottom: -14vw;
+  left: 2%; */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.skills:hover{
+  text-shadow: 0vw 0vw 0.4vw var(--accent1);
+}
+
+.skillBox{
+  background: var(--glass-background);
+  opacity: 0.9;
+  border-radius: 10px;
+  padding: 2vw;
+  width: 26vw;
+  height: 18vw;
+  color: var(--text-color1);
+  box-shadow: var(--glass-shadow);
+  border: var(--glass-border)
+}
+.skill-title{
+  font-size: 2vw;
+  font-weight: bold;
+  position: relative;
+  display: inline;
+}
+
+.skill-title::after{
+  content: '';
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: var(--border-glass-shadow);
+    /* background-color: var(--text-color2); */
+    position: absolute;
+    bottom: -1vw;
+    left: 0vw;
+}
+
+.BoxSkill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5vw;
+  margin-top: 2vw;
+}
+
+@media (max-width: 1010px){
+  #skills{
+    margin-top: 4vw;
+    flex: 1 1;
+  }
+  
+.BoxSkill{
+  margin-top: 3vw;
+}
+
+  .skills{
+    
+    font-size: 18vw;
+    text-align: center;
+    transition: text-shadow 0.3s ease-in-out;
+  }
+  .skillBox{
+    width: 42vw;
+    height: 38vw;
+    box-shadow: var(--glass-shadow);
+  }
+  .skill-title{
+    font-size: 3vw;
+  }
+  
+  .skill-title::after{
+    content: '';
+      width: 100%;
+      height: 8px;
+      background-color: transparent;
+      box-shadow: var(--border-glass-shadow);
+      position: absolute;
+      bottom: -1.7vw;
+      left: 0vw;
+  }
+  
+}
+
+@media (max-width: 700px){
+  .skillBox{
+    width: 44vw;
+    height: 50vw;
+    
+    box-shadow: var(--glass-shadow);
+  }
+  .skill-title{
+    font-size: 5vw;
+    /* margin-bottom: 4vw; */
+  }
+  
+  .skill-title::after{
+    content: '';
+      width: 100%;
+      height: 8px;
+      background-color: transparent;
+      box-shadow: var(--border-glass-shadow);
+      position: absolute;
+      bottom:-2vw;
+      left: 0vw;
+  }
+  .BoxSkill{
+    margin-top: 5vw;
+  }
+}
+
+@media (max-width: 500px){
+  .skillBox{
+    width: 44vw;
+    height: 40vw;
+    box-shadow: var(--glass-shadow);
+  }
+  .skill-title::after{
+    height: 7px;
+  }
+  
+}
